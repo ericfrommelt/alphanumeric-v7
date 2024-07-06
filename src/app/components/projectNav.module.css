@@ -1,0 +1,43 @@
+.projectNav {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  align-self: end;
+}
+.projectNav li {
+  list-style: none;
+  text-align: left;
+  line-height: var(--globals-line-height);
+}
+
+.navGroup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.2rem;
+  transition: 0.2s;
+}
+
+.navGroup:hover {
+  cursor: pointer;
+  gap: 0.5rem;
+}
+
+.arrowLeft {
+  position: relative;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.navGroup:hover .arrowLeft {
+  opacity: 1;
+}
+
+.navArrow {
+  stroke: rgb(var(--accent-rgb));
+}
+
+.navItemWrapper {
+  display: inline-block;
+}

@@ -1,0 +1,11 @@
+.mastheadName, .masthead p {
+  line-height: var(--globals-line-height);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.masthead {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding-left: 0.5rem;
+}
