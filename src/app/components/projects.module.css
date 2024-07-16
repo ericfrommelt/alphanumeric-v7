@@ -1,3 +1,19 @@
+@property --p1 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+@property --p2 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+@property --pblur {
+  initial-value: 20px;
+}
+
 .projects__grid {
   grid-column: 2;
   display: grid;
@@ -16,10 +32,6 @@
 
 .project__img__wrapper {
   position: relative;
-}
-
-@property --pblur {
-  initial-value: 20px;
 }
 
 .project__img__wrapper:hover .project__img__bg {
@@ -65,16 +77,13 @@
   100%{background-position:0% 50%}
 }
 
-@property --p1 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 0%;
+.project__img__border__a {
+  background: conic-gradient(from 0deg, rgb(var(--accent-rgb)) var(--p1), rgb(var(--background-rgb)) 0);
+  transition: --p1 1.6s ease-in;
 }
-
-@property --p2 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 0%;
+.project__img__border__b {
+  background: conic-gradient(from 180deg, rgb(var(--accent-rgb)) var(--p2), rgb(var(--background-rgb)) 0);
+  transition: --p2 1.6s ease-in;
 }
 
 .project__img__border__a, .project__img__border__b {
@@ -88,15 +97,6 @@
   transform: translate(-2px, -2px);
   mix-blend-mode: screen;
   opacity: 1;
-}
-
-.project__img__border__a {
-  background: conic-gradient(from 0deg, rgb(var(--accent-rgb)) var(--p1), rgb(var(--background-rgb)) 0);
-  transition: --p1 1.6s ease-in;
-}
-.project__img__border__b {
-  background: conic-gradient(from 180deg, rgb(var(--accent-rgb)) var(--p2), rgb(var(--background-rgb)) 0);
-  transition: --p2 1.6s ease-in;
 }
 
 .project__img__wrapper:hover .project__img__border__a {
