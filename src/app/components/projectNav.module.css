@@ -4,6 +4,7 @@
   grid-row-start: 2;
   grid-row-end: 4;
   align-self: end;
+  z-index: 5000;
 }
 .projectNav li {
   list-style: none;

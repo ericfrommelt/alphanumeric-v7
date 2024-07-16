@@ -1,5 +1,6 @@
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import Masthead from "./components/masthead";
 
 const plexSans = IBM_Plex_Sans({ 
   weight: ['100', '200', '300', '400', '500', '600', '700'],
@@ -25,7 +26,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={plexSans.className}>{children}</body>
+      <body className={plexSans.className}>
+      <Masthead />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,15 +1,19 @@
+"use client"
+
+import { useState } from "react";
+
 import Image from "next/image";
 import styles from "./page.module.css";
-import Masthead from "./components/masthead";
-import Navigation from "./components/navigation";
-import ProjectNav from "./components/projectNav";
+import Projects from "./components/Projects";
+
 
 export default function Home() {
+
   return (
     <main className={styles.main}>
-      <Masthead />
-      <Navigation />
-      <ProjectNav />
+      <div className={styles.content__wrapper}>
+        <Projects />
+      </div>
     </main>
   );
 }

@@ -1,0 +1,10 @@
+.label > div {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+  background: #00000088;
+  padding: 1rem;
+  white-space: nowrap;
+  margin-bottom: 0.5rem;
+  border-radius: .4rem;
+}
