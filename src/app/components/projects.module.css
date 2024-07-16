@@ -1,16 +1,18 @@
 @property --p1 {
-  syntax: '<percentage>';
+  syntax: "<percentage>";
   inherits: false;
   initial-value: 0%;
 }
 
 @property --p2 {
-  syntax: '<percentage>';
+  syntax: "<percentage>";
   inherits: false;
   initial-value: 0%;
 }
 
 @property --pblur {
+  syntax: "<length>";
+  inherits: false;
   initial-value: 20px;
 }
 
