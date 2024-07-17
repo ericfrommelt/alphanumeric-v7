@@ -1,6 +1,7 @@
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Masthead from "./components/masthead";
+import { GoogleAnalytics } from "@next/third-parties/google"
 
 const plexSans = IBM_Plex_Sans({ 
   weight: ['100', '200', '300', '400', '500', '600', '700'],
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <Masthead />
         {children}
       </body>
+      <GoogleAnalytics gaId="G-X9V0K849BR"/>
     </html>
   );
 }
