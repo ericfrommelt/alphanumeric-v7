@@ -6,17 +6,24 @@ export default function Masthead() {
       <div className={styles.nameWrapper}>
         <div className={styles.navItemWrapper}>
           <div className={styles.navGroup}>
-            <div className={styles.arrowLeft}>
-              <svg className={styles.navArrow} width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 9L5 5L1 0.999999"/>
-              </svg>
+     
+            <div className={styles.cube}>
+              <div className={styles.container}>
+                <div className={styles.overlay}>
+                  <div className={styles.top}>
+                    <a href="/"><h1 className={styles.mastheadName}>Alphanumeric.io</h1></a>
+                  </div>
+                  <div className={styles.front}>
+                    <a href="/"><h1 className={styles.mastheadAlpha}>Eric Frommelt</h1></a>
+                  </div>
+                </div>
+              </div>
             </div>
-              <a href="/"><h1 className={styles.mastheadName}>Eric Frommelt</h1></a>
           </div>
         </div>
       </div>
-      <p>Digital Design Engineer</p>
-      <p>Los Angeles, California</p>
+      {/* <p>Digital Design Engineer</p>
+      <p>Los Angeles, California</p> */}
     </header>
   );
 }

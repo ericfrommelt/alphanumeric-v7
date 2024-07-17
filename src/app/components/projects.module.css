@@ -141,3 +141,8 @@
   margin: 1rem 0;
   display: inline-block;
 }
+
+.cta {
+  font-family: var(--font-mono);
+  font-size: .8rem;
+}

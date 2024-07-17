@@ -20,7 +20,7 @@
 }
 
 .title, .info {
-  margin: 4rem 0;
+
   line-height: 1.4rem;
   font-weight: 400;
   font-size: 1rem;
@@ -35,4 +35,17 @@
 
 .number {
   grid-column: 2;
+}
+
+.description {
+  grid-column: 2;
+  margin: 6rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.commands {
+  font-family: var(--font-mono);
+  font-size: .8rem;
 }

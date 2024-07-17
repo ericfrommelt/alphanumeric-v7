@@ -1,4 +1,4 @@
-.mastheadName, .masthead p {
+.mastheadAlpha, .mastheadName, .masthead p {
   line-height: var(--globals-line-height);
   font-size: 1rem;
   font-weight: 400;
@@ -13,11 +13,11 @@
 }
 
 .navGroup {
-  display: flex;
-  justify-content: flex-start;
+  display: relative;
+  /* justify-content: flex-start;
   align-items: center;
   gap: 0.2rem;
-  transition: 0.2s;
+  transition: 0.2s; */
 }
 
 .navGroup:hover {
@@ -31,6 +31,7 @@
   transition: 0.3s;
 }
 
+
 .navGroup:hover .arrowLeft {
   opacity: 1;
 }
@@ -42,3 +43,48 @@
 .navItemWrapper {
   display: inline-block;
 }
+
+.container {
+  display: block;
+  /* transition: 0.3s; */
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  perspective-origin: top;
+  perspective: 200px;
+  transform-style: preserve-3d;
+}
+
+.top, .front, .overlay {
+  display: block;
+  position: absolute;
+  width: 32rem;
+  height: 1.4rem;
+  border: none;
+  backface-visibility: hidden;
+  transition: 0.4s;
+}
+
+.overlay {
+  z-index: 100;
+  overflow: hidden;
+}
+
+.overlay:hover .top {
+  transform: rotateX(0deg) translateZ(12px);
+}
+
+.overlay:hover .front {
+  transform: rotateX(-90deg) translateZ(12px);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(12px);
+}
+
+.front {
+  transform: rotateX(0deg) translateZ(12px);
+}
+

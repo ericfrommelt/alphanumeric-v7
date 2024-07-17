@@ -23,7 +23,7 @@ export default function Projects() {
                   <path d="M1 9L5 5L1 0.999999"/>
                 </svg>
               </div>
-              View project
+              <span className={styles.cta}>View Project</span>
             </div>
           </div>
         </a>
@@ -46,7 +46,7 @@ export default function Projects() {
                   <path d="M1 9L5 5L1 0.999999"/>
                 </svg>
               </div>
-              View project
+              <span className={styles.cta}>View Project</span>
             </div>
           </div>
         </a>
@@ -69,7 +69,7 @@ export default function Projects() {
                   <path d="M1 9L5 5L1 0.999999"/>
                 </svg>
               </div>
-              View project
+              <span className={styles.cta}>View Project</span>
             </div>
           </div>
         </a>
@@ -92,7 +92,7 @@ export default function Projects() {
                   <path d="M1 9L5 5L1 0.999999"/>
                 </svg>
               </div>
-              View project
+              <span className={styles.cta}>View Project</span>
             </div>
           </div>
         </a>

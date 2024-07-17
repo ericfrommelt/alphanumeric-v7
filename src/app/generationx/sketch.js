@@ -5,29 +5,29 @@ import p5 from 'p5'
 
 const P5Sketch = () => {
   const sketchRef = useRef();
-
+  
   useEffect(() => {
     const sketch = (p) => {
-
-    // Colors
-    let background = p.color(245, 245, 245);
-    let cgrey = p.color(152, 160, 168);
-    let cteal = p.color(45, 226, 226);
-    let cblack = p.color(38, 41, 45);
-    let cdrkGrey = p.color(107, 107, 107);
-    let cliteGrey = p.color(247, 247, 247);
-    let cPink = p.color(229, 32, 169);
-    let cyellow = p.color(238, 252, 61);
-    let cpinkTint = p.color(211, 159, 198);
-    let cneonGreen = p.color(3, 88, 250);
-    let gradYellow = p.color(254, 88, 110);
-    let baseColor = background;
-
-    // RandomNumbers
-    // let randNum = 0;
-    let randNum = p.int(p.random(0, 5));
-
-    p.setup = () => {
+      
+      // Colors
+      let background = p.color(245, 245, 245);
+      let cgrey = p.color(152, 160, 168);
+      let cteal = p.color(45, 226, 226);
+      let cblack = p.color(38, 41, 45);
+      let cdrkGrey = p.color(107, 107, 107);
+      let cliteGrey = p.color(247, 247, 247);
+      let cPink = p.color(229, 32, 169);
+      let cyellow = p.color(238, 252, 61);
+      let cpinkTint = p.color(211, 159, 198);
+      let cneonGreen = p.color(3, 88, 250);
+      let gradYellow = p.color(254, 88, 110);
+      let baseColor = p.color(245, 245, 245);
+      
+      // RandomNumbers
+      // let randNum = 0;
+      let randNum = p.int(p.random(0, 5));
+      
+      p.setup = () => {
       // Loop ///////////////////////////////
       p.noLoop();
       ///////////////////////////////////////
@@ -39,15 +39,12 @@ const P5Sketch = () => {
       //-------------------------------------
       // Canvas
       p.createCanvas(1100, 1100);
-      p.background(0);
-      p.pixelDensity(2);
+      p.pixelDensity(1);
       p.baseColor()
 
       //-------------------------------------
       // Interaction
       p.keyPressed();
-      console.log('hello');
-      console.log(p.key);
     };
 
     p.draw = () => {
@@ -416,7 +413,7 @@ const P5Sketch = () => {
 
       // Utilities
     p.baseColor = function() {
-      p.fill(baseColor);
+      p.fill(200);
       p.rect(0, 0, p.width, p.height);
     };
 
@@ -438,10 +435,12 @@ const P5Sketch = () => {
     };
 
     p.keyPressed = function() {
-      console.log(p.key);
       if (p.key === 's' || p.key === 'S') {
         p.save('sketch-00.png');
         console.log('saved');
+      } else if (p.key === 'g' || p.key === 'G') {
+        p.draw();
+        console.log('redraw');
       }
     };
   };

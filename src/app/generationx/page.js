@@ -11,7 +11,10 @@ const Generationx = () => {
     <>
       <div className={styles.content__wrapper}>
         <h2 className={styles.title}>Generation__X</h2>
-        <p className={styles.info}>Generative art &mdash; 2024</p>
+        <div className={styles.description}>
+          <p className={styles.info}>Generative art &mdash; 2024</p>
+          <p className={styles.commands}>Key commands <br />G to generate a new composition<br />S to save a .png file</p>
+        </div>
         <div className={styles.p5Wrapper}>
           <GenSketch />
         </div>
