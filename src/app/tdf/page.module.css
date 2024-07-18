@@ -1,0 +1,53 @@
+.header {
+  max-width: var(--max-width);
+  margin: 4rem auto;
+}
+
+.header h1 {
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.header p {
+  font-weight: 200;
+}
+
+.stage__list {
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  margin: 4rem auto;
+}
+
+.stage {
+  display: grid;
+  grid-template-columns: minmax(6rem, .6fr) 1fr 1fr minmax(21rem, 1fr);
+  list-style: none;
+  padding: 0.2rem;
+  border-bottom: 1px solid rgba(56,56,56, 1);
+}
+
+.stage__number, .stage__route {
+  font-size: 0.8rem;
+}
+
+.stage__number {
+  font-weight: 700;
+  font-size: 1rem;
+  color: rgb(195, 195, 195);
+}
+
+.stage__date{}
+
+.stage__length, .stage__date, .stage__route {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  justify-self: center;
+}
+
+.stage__route{
+  justify-self: end;
+  white-space: nowrap;
+}

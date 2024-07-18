@@ -1,0 +1,39 @@
+.stage {
+  display: grid;
+  grid-template-columns: minmax(6rem, .6fr) 1fr 1fr minmax(21rem, 1fr);
+  list-style: none;
+  padding: 0.4rem;
+  border-bottom: 1px solid rgba(56,56,56, 1);
+  transition: all 0.1s ease-in;
+}
+
+.stage:hover {
+  background-color: rgba(66,66,66, 1);
+  color: white;
+}
+
+.stage__number, .stage__route {
+  font-size: 0.8rem;
+}
+
+.stage__number {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: .8rem;
+  color: rgb(255, 222, 15);
+}
+
+.stage__date{}
+
+.stage__length, .stage__date, .stage__route {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  justify-self: center;
+  color:rgb(255, 222, 15);
+}
+
+.stage__route{
+  color: rgb(255, 222, 15);
+  justify-self: end;
+  white-space: nowrap;
+}
