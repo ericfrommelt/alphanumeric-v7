@@ -52,7 +52,7 @@ export default function Projects() {
         </a>
       </div>
 
-      {/* <div className={styles.project}>
+      <div className={styles.project}>
         <a href="/tdf/">
           <div className={styles.project__img__wrapper}>
             <div className={styles.project__img}>
@@ -73,7 +73,7 @@ export default function Projects() {
             </div>
           </div>
         </a>
-      </div> */}
+      </div>
 
       <div className={styles.project}>
         <a href="https://www.vaporized.claims/">
