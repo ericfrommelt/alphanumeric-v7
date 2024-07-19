@@ -19,17 +19,16 @@ export default function Stage(props) {
 
   useGSAP(
     () => {
-      stageTimeline.current = gsap.timeline()
-      .to(numberRef.current, {
+      gsap.to(numberRef.current, {
         duration: 1.5,
         scrambleText: { 
           text: props.number,
           chars: "000000",
-          revealDelay: 1,
+          revealDelay: 0.2,
           speed: .5
         },
       })
-      .to(dateRef.current, {
+      gsap.to(dateRef.current, {
         duration: .5,
         scrambleText: { 
           text: props.date,
@@ -37,7 +36,7 @@ export default function Stage(props) {
           speed: .5
         },
       })
-      .to(lengthRef.current, {
+      gsap.to(lengthRef.current, {
         duration: .5,
         scrambleText: { 
           text: props.length,
@@ -45,7 +44,7 @@ export default function Stage(props) {
           speed: .5
         },
       })
-      .to(routeRef.current, {
+      gsap.to(routeRef.current, {
         duration: .5,
         scrambleText: { 
           text: props.route,

@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image";
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -41,6 +42,15 @@ export default function Page() {
   
   return (
     <>
+    <div className={styles.image__wrapper}>
+      <Image
+        src="/tdf.png"
+        width={2725}
+        height={1080}
+        alt="Tour de France 2024"
+        />
+    </div>
+    <div className={styles.wrapper}>
       <div className={styles.header}>
         <h1>Tour de France 2024</h1>
         <p>June 29 - July 21</p>
@@ -70,6 +80,7 @@ export default function Page() {
         <Stage ref={item22} number="Stage 20" date="07/20" length="132.8 km" route="Nice > Col de la Couillole" />
         <Stage ref={item23} number="Stage 21" date="07/21" length="33.7 km" route="Monaco > Nice" />
       </div>
+    </div>
     </>
   );
 }

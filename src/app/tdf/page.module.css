@@ -1,9 +1,24 @@
+.wrapper {
+  max-width: var(--max-width);
+  margin: 8rem auto;
+  padding: 0 3.2rem;
+}
+
+.image__wrapper {
+  position:absolute;
+  top: 6rem;
+  left: 24rem;
+  width: 100%;
+  z-index: -2;
+}
+
 .header {
   max-width: var(--max-width);
   margin: 4rem auto;
 }
 
 .header h1 {
+  font-size: 4rem;
   font-weight: 700;
   font-style: italic;
   text-transform: uppercase;
@@ -11,6 +26,7 @@
 
 .header p {
   font-weight: 200;
+  font-size: .9rem;
 }
 
 .stage__list {
