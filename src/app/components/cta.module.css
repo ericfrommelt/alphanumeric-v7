@@ -1,0 +1,36 @@
+.navGroup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0rem;
+  transition: 0.2s;
+}
+
+.navGroup:hover {
+  cursor: pointer;
+  gap: 0.5rem;
+}
+
+.arrowLeft {
+  position: relative;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.navGroup:hover .arrowLeft {
+  opacity: 1;
+}
+
+.navArrow {
+  stroke: rgb(var(--accent-rgb));
+}
+
+.navItemWrapper {
+  margin: 1rem 0;
+  display: inline-block;
+}
+
+.cta {
+  font-family: var(--font-mono);
+  font-size: .8rem;
+}
