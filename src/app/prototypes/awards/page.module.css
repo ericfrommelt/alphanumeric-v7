@@ -62,7 +62,13 @@
   animation-fill-mode: backwards;
   animation-duration: 1.4s;
   animation-delay: 2.2s;
+  transition: 0.5s cubic-bezier(.34,.01,.15,.92);
 }
+
+/* .jury__prize:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+} */
 
 @keyframes fadeIn {
   0% {

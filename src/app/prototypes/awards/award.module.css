@@ -11,7 +11,14 @@
   margin: .4rem;
   text-align: center;
   z-index: 1;
+  transition: 0.5s cubic-bezier(.34,.01,.15,.92);
 }
+
+/* .award:hover {
+  font-weight: 900;
+  cursor: pointer;
+} */
+
 .svg__wrapper {
   grid-column: 1;
   grid-row: 1 / 3;

@@ -1,0 +1,51 @@
+.p5Wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  grid-column: 2;
+}
+
+.outPutGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+.content__wrapper {
+  display: grid;
+  grid-template-columns: auto minmax(auto, var(--max-width)) auto;
+  margin: 8rem 0;
+}
+
+.title, .info {
+
+  line-height: 1.4rem;
+  font-weight: 400;
+  font-size: 1rem;
+  grid-column: 2;
+}
+
+.title {
+  display: inline-flex;
+  border-top: #FFF 1px solid;
+  padding-top: 1rem
+}
+
+.number {
+  grid-column: 2;
+}
+
+.description {
+  grid-column: 2;
+  margin: 6rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.commands {
+  font-family: var(--font-mono);
+  font-size: .8rem;
+}
