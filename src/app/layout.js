@@ -1,4 +1,4 @@
-import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Masthead from "./components/masthead";
 import Footer from "./components/Footer";
@@ -20,9 +20,17 @@ const plexMono = IBM_Plex_Mono({
   display: 'swap',
   adjustFontFallback: false});
 
+const inter = Inter({ 
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
+  preload: true,
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+  adjustFontFallback: false});
+
 export const metadata = {
   title: "Eric Frommelt",
-  description: "Digital Design Engineer based in Los Angeles, California",
+  description: "Design Technologist based in Los Angeles, California",
 };
 
 export default function RootLayout({ children }) {

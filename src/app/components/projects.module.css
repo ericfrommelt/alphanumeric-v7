@@ -146,3 +146,8 @@
   font-family: var(--font-mono);
   font-size: .8rem;
 }
+
+.section__title {
+  grid-column: 2;
+  margin: 0 4rem;
+}

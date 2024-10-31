@@ -1,0 +1,52 @@
+.content__wrapper {
+  display: grid;
+  grid-template-columns: auto minmax(auto, var(--max-width)) auto;
+  margin: 8rem 4rem;
+  margin-bottom: 4rem;
+}
+
+.proto {
+  grid-column: 2;
+  width: 640px;
+  height: 480px;
+}
+
+.proto > canvas {
+  width: 640px;
+  height: 480px;
+}
+
+.content {
+  grid-column: 2;
+  max-width: 88%;
+}
+
+.meta {
+  margin: 2rem 0;
+  font-family: var(--font-mono);
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.block {
+  margin: 4rem 0;
+}
+
+.cta {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 1rem 3rem;
+  background-color: rgb(219, 105, 57);
+}
+
+@media screen and (max-width: 1200px) {
+
+  .content {
+    max-width: 100%;
+  }
+  
+}

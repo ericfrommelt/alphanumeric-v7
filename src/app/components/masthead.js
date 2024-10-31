@@ -11,7 +11,7 @@ export default function Masthead() {
               <div className={styles.container}>
                 <div className={styles.overlay}>
                   <div className={styles.top}>
-                    <a href="/"><h1 className={styles.mastheadName}>Alphanumeric.io</h1></a>
+                    <a href="/"><h1 className={styles.mastheadName}>Design Technologist</h1></a>
                   </div>
                   <div className={styles.front}>
                     <a href="/"><h1 className={styles.mastheadAlpha}>Eric Frommelt</h1></a>
