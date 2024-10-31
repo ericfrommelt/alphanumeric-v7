@@ -22,13 +22,13 @@ export default function hpe() {
           <div className={styles.block}>
             <p>Next, I established my grid and styles based on brand guidelines.</p>
             <figure>
-              <Image src="/img/hpe/hpe_css-2_hpe_css.png" alt="HPE Grid" width={1920} height={1080} />
+              <Image src="/img/hpe/css.png" alt="HPE Grid" width={1920} height={1080} />
             </figure>
           </div>
           <div className={styles.block}>
             <p>I broke down the title treatment into svgs and animated them with the GSAP animation library.</p>
             <figure>
-              <Image src="/img/hpe/hpe_css-2_svgBreakdown.png" alt="HPE Grid" width={1920} height={1080} />
+              <Image src="/img/hpe/svgBreakdown.png" alt="HPE Grid" width={1920} height={1080} />
             </figure>
           </div>
           <div className={styles.block}>
