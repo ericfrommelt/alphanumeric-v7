@@ -3,3 +3,7 @@
   list-style: none;
   translate: -10px;
 }
+
+.footer {
+  border-top: 1px solid #fff;
+}
