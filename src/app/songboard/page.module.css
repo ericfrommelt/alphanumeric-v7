@@ -1,19 +1,19 @@
 .container {
-  max-width: 800px;
+  max-width: 1200px;
+  height: 100%;
   margin: 0 auto;
   padding: 2rem;
   font-family: system-ui, -apple-system, sans-serif;
 }
 
 .header {
-  text-align: left;
   margin-bottom: 2rem;
 }
 
 .title {
-  font-size: 4rem;
-  color: #ffffff;
-  margin-bottom: 0.5rem;
+  /* font-size: 2.5rem;
+  color: #333333;
+  margin-bottom: 0.5rem; */
 }
 
 .subtitle {
@@ -61,13 +61,35 @@
   cursor: not-allowed;
 }
 
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
 .lyrics {
   white-space: pre-wrap;
   line-height: 1.6;
   padding: 2rem;
-  background-color: #292929;
+  background-color: #262626;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.imageContainer {
+  position: relative;
+  aspect-ratio: 1;
+  background-color: #000000;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .loading {
@@ -75,4 +97,11 @@
   color: #718096;
   font-size: 1.1rem;
   margin: 2rem 0;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }

@@ -1,18 +1,23 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 import styles from './page.module.css';
 
 export default function Home() {
   const [topic, setTopic] = useState('');
   const [lyrics, setLyrics] = useState('');
+  const [imageUrl, setImageUrl] = useState('');
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setLyrics('');
+    setImageUrl('');
     
     try {
-      const res = await fetch('/api/generate', {
+      // First generate lyrics
+      const lyricsRes = await fetch('/api/generate-lyrics', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -20,15 +25,26 @@ export default function Home() {
         body: JSON.stringify({ topic }),
       });
 
-      if (!res.ok) {
-        throw new Error('Failed to generate lyrics');
-      }
+      if (!lyricsRes.ok) throw new Error('Failed to generate lyrics');
+      const lyricsData = await lyricsRes.json();
+      setLyrics(lyricsData.response);
 
-      const data = await res.json();
-      setLyrics(data.response);
+      // Then generate image based on lyrics
+      const imageRes = await fetch('/api/generate-image', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ lyrics: lyricsData.response }),
+      });
+
+      if (!imageRes.ok) throw new Error('Failed to generate image');
+      const imageData = await imageRes.json();
+      setImageUrl(imageData.imageUrl);
+
     } catch (error) {
       console.error('Error:', error);
-      setLyrics('Sorry, there was an error generating your song lyrics.');
+      setLyrics('Sorry, there was an error generating your content.');
     } finally {
       setLoading(false);
     }
@@ -37,7 +53,11 @@ export default function Home() {
   return (
     <main className={styles.container}>
       <div className={styles.header}>
-        <h1 className={styles.title}>Song Board</h1>
+      <div className={styles.meta}>
+              <small>Technology: Bedrock, Claude, Stable Diffusion</small>
+              <h1 className={styles.title}>Songboard</h1>
+              <p>A moodboard for songwriters</p>
+            </div>
       </div>
       
       <form onSubmit={handleSubmit} className={styles.form}>
@@ -54,20 +74,34 @@ export default function Home() {
           className={styles.button}
           disabled={loading}
         >
-          {loading ? 'Writing...' : 'Write Song'}
+          {loading ? 'Creating...' : 'Create'}
         </button>
       </form>
 
-      {loading && (
-        <div className={styles.loading}>
-          Composing your lyrics...
+      {loading ? (
+        <div className={styles.loadingContainer}>
+          <div className={styles.loading}>Composing your song...</div>
+          <div className={styles.loading}>Creating artwork...</div>
         </div>
-      )}
-      
-      {lyrics && (
-        <div className={styles.lyrics}>
-          {lyrics}
-        </div>
+      ) : (
+        lyrics && (
+          <div className={styles.content}>
+            <div className={styles.lyrics}>
+              {lyrics}
+            </div>
+            {imageUrl && (
+              <div className={styles.imageContainer}>
+                <Image
+                  src={imageUrl}
+                  alt="AI generated artwork for the song"
+                  className={styles.image}
+                  fill
+                  priority
+                />
+              </div>
+            )}
+          </div>
+        )
       )}
     </main>
   );

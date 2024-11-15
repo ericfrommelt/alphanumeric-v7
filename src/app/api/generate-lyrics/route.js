@@ -13,7 +13,8 @@ export async function POST(request) {
     });
 
     const prompt = `Write cerebral and abstract song lyrics about "${topic}". 
-    The song should have a verse-chorus structure and be emotionally engaging. 
+    The song should have a verse-chorus structure and be smart and emotionally engaging.
+    Use a mix of words, phrases, and metaphors to create a unique and thought-provoking experience. Use rhyme sparingly. 
     Format the output with clear line breaks between verses and chorus. 
     Don't include any explanations, just the lyrics.`;
 
@@ -35,8 +36,7 @@ export async function POST(request) {
 
     const command = new InvokeModelCommand(input);
     const response = await client.send(command);
-
-    // Parse the response
+    
     const responseBody = JSON.parse(new TextDecoder().decode(response.body));
     
     return Response.json({ 
