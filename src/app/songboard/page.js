@@ -3,8 +3,8 @@ import { useState } from 'react';
 import styles from './page.module.css';
 
 export default function Home() {
-  const [prompt, setPrompt] = useState('');
-  const [response, setResponse] = useState('');
+  const [topic, setTopic] = useState('');
+  const [lyrics, setLyrics] = useState('');
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -17,18 +17,18 @@ export default function Home() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ prompt }),
+        body: JSON.stringify({ topic }),
       });
 
       if (!res.ok) {
-        throw new Error('Failed to generate response');
+        throw new Error('Failed to generate lyrics');
       }
 
       const data = await res.json();
-      setResponse(data.response);
+      setLyrics(data.response);
     } catch (error) {
       console.error('Error:', error);
-      setResponse('An error occurred while generating the response.');
+      setLyrics('Sorry, there was an error generating your song lyrics.');
     } finally {
       setLoading(false);
     }
@@ -36,13 +36,17 @@ export default function Home() {
 
   return (
     <main className={styles.container}>
-      <h1>AI Prompt Assistant</h1>
+      <div className={styles.header}>
+        <h1 className={styles.title}>Song Board</h1>
+      </div>
+      
       <form onSubmit={handleSubmit} className={styles.form}>
-        <textarea
+        <input
+          type="text"
           className={styles.input}
-          value={prompt}
-          onChange={(e) => setPrompt(e.target.value)}
-          placeholder="Enter your prompt here..."
+          value={topic}
+          onChange={(e) => setTopic(e.target.value)}
+          placeholder="What&apos;s your song about?"
           required
         />
         <button 
@@ -50,14 +54,19 @@ export default function Home() {
           className={styles.button}
           disabled={loading}
         >
-          {loading ? 'Generating...' : 'Generate Response'}
+          {loading ? 'Writing...' : 'Write Song'}
         </button>
       </form>
-      {loading && <div className={styles.loading}>Generating response...</div>}
-      {response && (
-        <div className={styles.response}>
-          <h2>Response:</h2>
-          {response}
+
+      {loading && (
+        <div className={styles.loading}>
+          Composing your lyrics...
+        </div>
+      )}
+      
+      {lyrics && (
+        <div className={styles.lyrics}>
+          {lyrics}
         </div>
       )}
     </main>

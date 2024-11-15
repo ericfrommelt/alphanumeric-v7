@@ -2,7 +2,7 @@ import { BedrockRuntimeClient, InvokeModelCommand } from "@aws-sdk/client-bedroc
 
 export async function POST(request) {
   try {
-    const { prompt } = await request.json();
+    const { topic } = await request.json();
 
     const client = new BedrockRuntimeClient({
       region: process.env.AWS_REGION,
@@ -11,6 +11,11 @@ export async function POST(request) {
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
       },
     });
+
+    const prompt = `Write cerebral and abstract song lyrics about "${topic}". 
+    The song should have a verse-chorus structure and be emotionally engaging. 
+    Format the output with clear line breaks between verses and chorus. 
+    Don't include any explanations, just the lyrics.`;
 
     const input = {
       modelId: "anthropic.claude-3-haiku-20240307-v1:0",
@@ -40,6 +45,6 @@ export async function POST(request) {
     
   } catch (error) {
     console.error('Error:', error);
-    return Response.json({ error: 'Failed to generate response' }, { status: 500 });
+    return Response.json({ error: 'Failed to generate lyrics' }, { status: 500 });
   }
 }
