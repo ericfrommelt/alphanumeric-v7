@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.691.0",
     "@gsap/react": "^2.1.1",
     "@next/third-parties": "^14.2.5",
     "@react-three/drei": "^9.108.3",
