@@ -2,7 +2,7 @@ import { BedrockRuntimeClient, InvokeModelCommand } from "@aws-sdk/client-bedroc
 
 export async function POST(request) {
   try {
-    const { lyrics } = await request.json();
+    const { lyrics, style } = await request.json();
 
     const client = new BedrockRuntimeClient({
       region: process.env.AWS_REGION,
@@ -12,10 +12,17 @@ export async function POST(request) {
       },
     });
 
-    // Create a summarized prompt from the lyrics
+    // Adjust prompt based on style
+    let stylePrompt = '';
+    if (style === 'anime') {
+      stylePrompt = 'in anime style, with bold colors and dramatic composition';
+    } else {
+      stylePrompt = 'in a realistic photographic style with dramatic lighting';
+    }
+
     const imagePrompt = `Create a captivating album cover based on these song lyrics: ${lyrics}. 
-    Make it artistic and abstract, suitable for an album cover. 
-    Use vibrant colors and meaningful symbolism from the lyrics. Do not use letters, fonts, or type on the album cover.`;
+    Make it artistic and abstract, suitable for an album cover, ${stylePrompt}. 
+    Use vibrant colors and meaningful symbolism from the lyrics.`;
 
     const input = {
       modelId: "stability.stable-diffusion-xl-v1",
@@ -31,7 +38,7 @@ export async function POST(request) {
         cfg_scale: 10,
         steps: 50,
         seed: Math.floor(Math.random() * 1000000),
-        style_preset: "cinematic",
+        style_preset: style === 'anime' ? 'anime' : 'cinematic',
       })
     };
 

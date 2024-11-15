@@ -13,10 +13,8 @@ export async function POST(request) {
     });
 
     const prompt = `Write cerebral and abstract song lyrics about "${topic}". 
-    The song should have a verse-chorus structure and be smart and emotionally engaging.
-    Use a mix of words, phrases, and metaphors to create a unique and thought-provoking experience. Use rhyme sparingly. 
-    Format the output with clear line breaks between verses and chorus. 
-    Don't include any explanations, just the lyrics.`;
+    The song should have a verse-chorus structure and be smart and emotionally engaging. Use a mix of words, phrases, and metaphors to create a unique and thought-provoking experience. Use rhyme sparingly. 
+    Format the output with clear line breaks between verses and chorus. Don't include any explanations, just the lyrics.`;
 
     const input = {
       modelId: "anthropic.claude-3-haiku-20240307-v1:0",
