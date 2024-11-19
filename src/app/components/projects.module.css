@@ -145,6 +145,7 @@
 .cta {
   font-family: var(--font-mono);
   font-size: .8rem;
+  padding-top: 1px;
 }
 
 .section__title {
