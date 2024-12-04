@@ -12,8 +12,8 @@ export default function Page() {
       </Head>
       <div className={styles.wrapper}>
         <article>
-          <h1 className={styles.title}>Directv In-App Purchase</h1>
-          <h5 className={styles.subhead}>The easiest way for customers to sign up for Directv</h5>
+          <h4 className={styles.title}>Directv In-App Purchase</h4>
+          <p className={styles.subhead}>The easiest way for customers to sign up for Directv</p>
           <div className={styles.slide}>
             <figure className={styles.img__slide__wrapper}>
               <video src="/img/dtv/iap/ChannelComparison.mp4" loop muted autoPlay></video>

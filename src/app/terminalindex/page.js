@@ -8,8 +8,8 @@ export default function Page() {
         <div className={styles.content}>
           <div className={styles.meta}>
             <small>Technology: Vue, Nuxt, CSS</small>
-            <h2>Terminal Index: a interaction sketchbook</h2>
-            <p>This was a personal project with the intention of exploring interaction, motion, and typography while expanding my knowledge of Nuxt JS and CSS.</p>
+            <h4>Terminal Index: a interaction sketchbook</h4>
+            <p>This was a personal project with the intention of exploring interaction, motion, and typography.</p>
             <a href="https://terminalindex.vercel.app">
               <div className={styles.cta}>
                 View Site

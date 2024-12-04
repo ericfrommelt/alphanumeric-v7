@@ -14,7 +14,7 @@ export default function Page() {
           <div className={styles.content}>
             <div className={styles.meta}>
               <small>Technology: Unity, C#</small>
-              <h2>Sports Mode: Prototyping a novel new feature for sports fans</h2>
+              <h4>Sports Mode: Prototyping a novel new feature for sports fans</h4>
               <p>Directv has one of the most comprehensive sports packages in the industry and wanted to give hardcore fans a simple and elegant way to engage with their favorite games. Sports Mode&mdash;when activated&mdash;brings a customers favorite teams, games, and stats together in one place in the context of watching live sports.</p>
             </div>
             <div className={styles.block}>

@@ -11,7 +11,7 @@ export default function hpe() {
           <div className={styles.meta}>
             <small>Technology: React, Gatsby, CSS, GSAP, D3</small>
           </div>
-          <h2>Building a content templeting system with the ability to add art directed title treatments with animation.</h2>
+          <h4>Building a content templeting system with the ability to add art directed title treatments with animation.</h4>
           <p>My team at Digitas needed a way to deliver design templates that allowed for the delivery of content pages with the option to include art directable, animated title treatments. The turn around time for these requests were generally five to ten days. So the templates had to be simple and repeatable.</p>
           <div className={styles.block}>
             <p>I started by building a prototype in Gatsby, a static site generator built in React. For the title treatment I made an animatic in After Effects. This would guide my development of animating the title in GSAP down the line.</p>
@@ -38,7 +38,7 @@ export default function hpe() {
             </figure>
           </div>
           <div className={styles.block}>
-            <h4>Impact</h4>
+            <h5>Impact</h5>
             <p>After integrating the template system into our workflow, we were able to reduce our overall delivery time by 50%.</p>
           </div>
         </div>
