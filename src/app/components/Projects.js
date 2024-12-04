@@ -54,7 +54,7 @@ export default function Projects() {
         </div>
 
         <div className={styles.project}>
-          <a href="/dtv/">
+          <a href="/iap/">
           <div className={styles.project__img__wrapper}>
           <div className={styles.project__img}>
                 <Image src="/img/dtv/iap/DTV_IAP_thumbnail.png" alt="In app purchase" width={1280} height={720} />
