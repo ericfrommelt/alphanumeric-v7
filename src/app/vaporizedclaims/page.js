@@ -10,7 +10,7 @@ export default function Page() {
             <small>Technology: CSS</small>
             <h2>Vaporized Claims: responsive collage</h2>
             <p>I have been enamored with collage since childhood and wanted to explore the combination of the classic idea of collage&mdash;paper cutouts and images pasted to a board&mdash;with modern web tecnology.</p>
-            <a href="https://www.vaporizedclaims">
+            <a href="https://www.vaporized.claims">
               <div className={styles.cta}>
                 View Site
               </div>
