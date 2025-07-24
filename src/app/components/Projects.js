@@ -25,6 +25,7 @@ export default function Projects() {
                   </svg>
                 </div>
                 <span className={styles.cta}>Sports Mode</span>
+                <span className={styles.cta}>/ interaction design / Unity</span>
               </div>
             </div>
           </a>
@@ -48,6 +49,7 @@ export default function Projects() {
                   </svg>
                 </div>
                 <span className={styles.cta}>HPE</span>
+                <span className={styles.cta}>/ content design / React, GSAP, D3</span>
               </div>
             </div>
           </a>
@@ -71,6 +73,31 @@ export default function Projects() {
                   </svg>
                 </div>
                 <span className={styles.cta}>In app purchase</span>
+                <span className={styles.cta}>/ product design / Figma, After Effects</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div className={styles.project}>
+          <a href="/gpus/">
+          <div className={styles.project__img__wrapper}>
+          <div className={styles.project__img}>
+                <Image src="/img/gpus/TN-gpus.png" alt="GPUs" width={1280} height={720} />
+              </div>
+            <div className={styles.project__img__bg}></div>
+            <div className={styles.project__img__border__a}></div>
+            <div className={styles.project__img__border__b}></div>
+          </div>
+            <div className={styles.navItemWrapper}>
+              <div className={styles.navGroup}>
+                <div className={styles.arrowLeft}>
+                  <svg className={styles.navArrow} width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 9L5 5L1 0.999999"/>
+                  </svg>
+                </div>
+                <span className={styles.cta}>GPUs</span>
+                <span className={styles.cta}>/ 3D generative design / Cinema 4D</span>
               </div>
             </div>
           </a>
@@ -94,6 +121,7 @@ export default function Projects() {
                   </svg>
                 </div>
                 <span className={styles.cta}>Terminal Index</span>
+                <span className={styles.cta}>/ interaction design / CSS</span>
               </div>
             </div>
           </a>
@@ -117,6 +145,7 @@ export default function Projects() {
                   </svg>
                 </div>
                 <span className={styles.cta}>Vaporized Claims</span>
+                <span className={styles.cta}>/ CSS</span>
               </div>
             </div>
           </a>
@@ -140,6 +169,7 @@ export default function Projects() {
                   </svg>
                 </div>
                 <span className={styles.cta}>yoshiGo!</span>
+                <span className={styles.cta}>/ Java, Processing, MIDI</span>
               </div>
             </div>
           </a>
@@ -163,6 +193,7 @@ export default function Projects() {
                   </svg>
                 </div>
                 <span className={styles.cta}>generationX</span>
+                <span className={styles.cta}>/ generative art / P5</span>
               </div>
             </div>
           </a>
@@ -191,6 +222,7 @@ export default function Projects() {
                   </svg>
                 </div>
                 <span className={styles.cta}>Songboard</span>
+                <span className={styles.cta}>/ Bedrock, Claude, Stable Diffusion</span>
               </div>
             </div>
           </a>
@@ -214,6 +246,7 @@ export default function Projects() {
                   </svg>
                 </div>
                 <span className={styles.cta}>Creator Nav</span>
+                <span className={styles.cta}>/ Rive</span>
               </div>
             </div>
           </a>
@@ -237,6 +270,7 @@ export default function Projects() {
                   </svg>
                 </div>
                 <span className={styles.cta}>TDF Stages</span>
+                <span className={styles.cta}>/ GSAP</span>
               </div>
             </div>
           </a>
@@ -260,6 +294,7 @@ export default function Projects() {
                   </svg>
                 </div>
                 <span className={styles.cta}>Film Fest Awards</span>
+                <span className={styles.cta}>/ CSS</span>
               </div>
             </div>
           </a>

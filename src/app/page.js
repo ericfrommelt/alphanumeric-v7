@@ -10,10 +10,8 @@ import Projects from "./components/Projects";
 export default function Home() {
 
   return (
-    <main className={styles.main}>
-      <div className={styles.content__wrapper}>
-        <Projects />
-      </div>
+    <main className="grid min-h-screen grid-cols-2 max-w-screen-xl mx-auto p-4 gap-4">
+      <Projects />
     </main>
   );
 }

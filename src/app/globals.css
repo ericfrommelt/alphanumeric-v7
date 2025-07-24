@@ -1,3 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --rockpants: #FF2F9E;
+  --chilldilla: #2f1739;
+  --excalibur: #70A4DB;
+  --chillout: #81F2FF;
+  --hawkworld: #FCDD60;
+  --greenmachine: #60FC60;
+  --fadinglime: #E5FC60;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
