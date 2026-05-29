@@ -3,6 +3,7 @@ import "./globals.css";
 import Masthead from "./components/masthead";
 import Footer from "./components/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google"
+import { Analytics } from "@vercel/analytics/next"
 
 const plexSans = IBM_Plex_Sans({ 
   weight: ['100', '200', '300', '400', '500', '600', '700'],
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
       <Footer />
       </body>
       <GoogleAnalytics gaId="G-X9V0K849BR"/>
+      <Analytics />
     </html>
   );
 }
